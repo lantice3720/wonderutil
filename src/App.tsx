@@ -1,9 +1,5 @@
 import React, {Fragment, useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Greetings from "./Greetings";
-import Counter from "./Counter";
-import MyForm from "./MyForm";
 import {NPC, NPCSearch} from "./NPC";
 import NPCUtil from "./NPCUtil";
 
