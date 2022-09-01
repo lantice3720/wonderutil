@@ -1,0 +1,29 @@
+[
+  {
+    "name": "lanthanide",
+    "description": "죽천사랑 영원히.",
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  {
+    "name": "Lestat",
+    "description": "Countless 던전 출구에서 설계도를 판매하는 해골 NPC. 암살판정을 받을 수 없다.",
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  {
+    "name": "Tani",
+    "description": "에테어빌 <타니의 무기들> 상점에 있다.",
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  {
+    "name": "testNPC",
+    "x": 0,
+    "y": 0,
+    "z": 0
+  }
+]

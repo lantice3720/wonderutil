@@ -1,26 +1,25 @@
-import React from 'react';
+import React, {Fragment, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Greetings from "./Greetings";
+import Counter from "./Counter";
+import MyForm from "./MyForm";
+import {NPC, NPCSearch} from "./NPC";
+import NPCUtil from "./NPCUtil";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    let [npc, setnpc] = useState<NPC>();
+
+    const onSubmit = (search: string) => {
+        setnpc(NPCSearch(search));
+        console.log(npc)
+    };
+
+    return (
+        <Fragment>
+            <NPCUtil npc={npc} onSubmit={onSubmit}/>
+        </Fragment>
+    );
 }
 
 export default App;
