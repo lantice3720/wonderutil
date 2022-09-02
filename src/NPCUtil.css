@@ -1,0 +1,32 @@
+#npcPos {
+    position: relative;
+}
+
+#npcPos:after {
+    background: black none repeat scroll 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    content: "";
+    width: 0;
+
+    height: 1px;
+    margin: 5px 0 0;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+#npcPos:hover:after {
+    width: 100%;
+    opacity: 1;
+}
+
+#npcPos:hover {
+    cursor: pointer;
+
+}
+
+#npcPos img {
+    height: 0.6em;
+}
