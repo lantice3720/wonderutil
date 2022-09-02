@@ -1,6 +1,8 @@
 import React, {useState} from "react";
+import './NPCUtil.css'
 import NPCList from "./resources/NPCList.json"
 import {NPC} from "./NPC";
+import copyImg from "./resources/copy.png"
 
 type NPCUtilProps = {
     npc: NPC | undefined;
@@ -15,6 +17,12 @@ function NPCUtil({npc, onSubmit}: NPCUtilProps) {
         onSubmit(search);
         setSearch('');
     };
+
+    const handleCopy = async (e: React.MouseEvent<HTMLSpanElement>) => {
+        if (npc===undefined) return;
+        await navigator.clipboard.writeText(`/guide ${npc.x} ${npc.y} ${npc.z}`);
+
+    }
 
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearch(e.target.value);
@@ -40,7 +48,7 @@ function NPCUtil({npc, onSubmit}: NPCUtilProps) {
                     NPC 이름을 위 검색창에서 찾아주세요.
                 </div> :
                 <div>
-                    {npc.name} 은 ({npc.x}, {npc.y}, {npc.z}) 에 있습니다.
+                    {npc.name} 은(는) <span id="npcPos" title="엔피시 위치를 길찾기 명령어로 복사합니다." onClick={handleCopy}><img src={copyImg} id="copyImg"/>{npc.x}, {npc.y}, {npc.z}</span> 에 있습니다.
                     {npc.description && <div>{npc.description}</div> }
                 </div>
             }

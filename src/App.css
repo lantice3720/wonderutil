@@ -1,0 +1,9 @@
+#title {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#title img {
+    height: 0.8em;
+    image-rendering: pixelated;
+}
