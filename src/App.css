@@ -1,9 +1,31 @@
+#toolbar {
+    position: fixed;
+    height: 5em;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.3em;
+    border-bottom: black solid;
+
+    background-image: url(resources/red_terracotta.png);
+    background-size: 10em;
+    image-rendering: pixelated;
+}
+
 #title {
     font-size: 3em;
     font-weight: bold;
+    background: url(resources/yellow_terracotta.png) 0.52em 0.52em;
+    background-size: 3.35em;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
 }
 
 #title img {
     height: 0.8em;
-    image-rendering: pixelated;
+}
+
+#main {
+    padding-top: 6em;
 }
