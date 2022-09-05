@@ -21,7 +21,7 @@ function App() {
                 {/*상단 툴바*/}
                 <span id='title'>
                     {/*제목*/}
-                    <Link to="/">
+                    <Link to="/home">
                         <img src={wonderFlag} alt=""/>Wonder Util<img src={wonderFlag} alt=""/>
                     </Link>
                 </span>
@@ -33,7 +33,7 @@ function App() {
             <div id="main">
                 <Routes>
                     {/*NPC 찾기 서비스*/}
-                    <Route path="/" element={<div>Wonder Util 은 여러분의 원더랜드 생활을 더욱 편리하게 하기 위해 최선을 다합니다.</div>}/>
+                    <Route path="/home" element={<div>Wonder Util 은 여러분의 원더랜드 생활을 더욱 편리하게 하기 위해 최선을 다합니다.</div>}/>
                     <Route path="/npc" element={<NPCUtil npc={npc} onSubmit={onSubmit}/>}/>
                 </Routes>
             </div>
