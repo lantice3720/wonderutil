@@ -2,17 +2,15 @@ import React from "react";
 import NPCList from './resources/NPCList.json';
 
 export type NPC = {
-    name: string | undefined;
+    name: string;
     description?: string | undefined;
-    x: number | undefined;
-    y: number | undefined;
-    z: number | undefined;
+    x: number
+    y: number;
+    z: number;
 };
 
-export function NPCSearch(toSearch: string | undefined): NPC {
-    const toReturn = NPCList.filter(npc => {
+export function NPCSearch(toSearch: string): NPC | undefined {
+    return NPCList.filter(npc => {
         return npc.name == toSearch;
     })[0];
-
-    return toReturn;
 }

@@ -1,31 +1,54 @@
 #toolbar {
     position: fixed;
-    height: 5em;
     top: 0;
     left: 0;
     right: 0;
-    padding: 0.3em;
-    border-bottom: black solid;
+    padding: 0.3rem;
+    height: 4.4rem;
 
     background-image: url(resources/red_terracotta.png);
-    background-size: 10em;
+    background-size: 10rem;
     image-rendering: pixelated;
 }
 
 #title {
-    font-size: 3em;
+    font-size: 3rem;
     font-weight: bold;
-    background: url(resources/yellow_terracotta.png) 0.52em 0.52em;
-    background-size: 3.35em;
+
+    background: url(resources/yellow_terracotta.png) 0.33rem 0.33rem;
+    background-size: 10rem;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-
 }
 
 #title img {
-    height: 0.8em;
+    height: 2.5rem;
+}
+
+nav {
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+nav a {
+    font-size: 1.6rem;
+    color: darkgoldenrod;
+    font-weight: bold;
+
+    display: inline-block;
+    position: relative;
+    bottom: 0.5rem;
+
+    /*border: goldenrod 1px solid;*/
+    /*border-radius: 3px;*/
+
+    /*box-shadow: 0 0 3px 1px goldenrod*/
+}
+
+a {
+    text-decoration-line: none;
 }
 
 #main {
-    padding-top: 6em;
+    padding-top: 5rem;
 }

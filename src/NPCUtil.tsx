@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import './NPCUtil.css'
 import NPCList from "./resources/NPCList.json"
-import {NPC} from "./NPC";
+import {NPC, NPCSearch} from "./NPC";
 import copyImg from "./resources/copy.png"
+
 
 type NPCUtilProps = {
     npc: NPC | undefined;
@@ -12,10 +13,16 @@ type NPCUtilProps = {
 function NPCUtil({npc, onSubmit}: NPCUtilProps) {
     const [search, setSearch] = useState('');
 
+    const query = new URLSearchParams(window.location.search);
+
+    if (!!query.get("npc")) {
+        npc = NPCSearch(query.get("npc") as string)
+    }
+
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         onSubmit(search);
-        // setSearch('');
+        setSearch('');
     };
 
     const handleCopy = async () => {
